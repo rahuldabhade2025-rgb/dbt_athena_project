@@ -3,7 +3,7 @@ name: dbt CI/CD
 on:
   push:
     branches:
-      - main  # Change to your primary branch name if different
+      - master  # Change to your primary branch name if different
   pull_request:
     branches:
       - main
