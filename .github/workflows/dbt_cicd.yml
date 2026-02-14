@@ -3,10 +3,10 @@ name: dbt CI/CD
 on:
   push:
     branches:
-      - main  # Ensure this is the primary branch you want to trigger the workflow
+      - master  # Ensure this is the primary branch you want to trigger the workflow
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   dbt:
@@ -31,7 +31,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Credentials for AWS
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          dbt debug  # Test connection and configuration
-          dbt run    # Execute dbt models
-          dbt test   # Run tests to validate
-
+          dbt debug  
+          dbt run    
+          dbt test   
