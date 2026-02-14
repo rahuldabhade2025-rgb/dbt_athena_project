@@ -34,6 +34,3 @@ jobs:
           dbt debug  # Test connection
           dbt run    # Execute dbt models
           dbt test   # Run tests
-
-
-
